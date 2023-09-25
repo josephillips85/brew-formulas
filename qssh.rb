@@ -11,7 +11,7 @@ class Qssh < Formula
       # ENV.deparallelize  # if your formula fails when building in parallel
       # Remove unrecognized options if warned by configure
       # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-      system "gcc qssh.c `find . \( -iname '*.c' -not -name 'qssh.c' \)` -o qssh"
+      system "./build_mac.sh"
       bin.install "qssh"
       
     end
@@ -26,6 +26,6 @@ class Qssh < Formula
       #
       # The installed folder is not in the path, so use the entire path to any
       # executables being tested: `system "#{bin}/program", "do", "something"`.
-      system "#{bin}/quickssh", "version"
+      system "#{bin}/qssh", "version"
     end
   end
