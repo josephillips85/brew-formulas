@@ -6,6 +6,7 @@ class Qssh < Formula
     license "GPL-3.0-or-later"
   
     uses_from_macos "gcc"
+    uses_from_macos "ssh"
   
     def install
       system "gcc qssh.c parser.c -o qssh"
