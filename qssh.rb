@@ -9,7 +9,7 @@ class Qssh < Formula
     uses_from_macos "ssh"
   
     def install
-      system "gcc qssh.c parser.c -o qssh"
+      system "gcc qssh.c parser.c autocomplete.c -o qssh"
       bin.install "qssh"
       
     end
